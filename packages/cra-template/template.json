@@ -4,10 +4,34 @@
       "@testing-library/jest-dom": "^5.11.4",
       "@testing-library/react": "^11.1.0",
       "@testing-library/user-event": "^12.1.10",
-      "web-vitals": "^1.0.1"
+      "web-vitals": "^1.0.1",
+      "bulma": "^0.9.1",
+      "eslint-config-airbnb": "^18.2.1",
+      "node-sass": "^4.14.1"
     },
     "eslintConfig": {
-      "extends": ["react-app", "react-app/jest"]
+      "extends": ["react-app", "airbnb", "react-app/jest"],
+      "rules": {
+        "no-console": [
+          "error",
+          { "allow": ["debug", "info", "warn", "error"] }
+        ],
+        "object-curly-newline": "off",
+
+        "import/order": [
+          "error",
+          {
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/jsx-one-expression-per-line": "off"
+      }
     }
   }
 }
